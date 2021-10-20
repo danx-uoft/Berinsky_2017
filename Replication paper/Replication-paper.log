@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.14)  16 OCT 2021 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  20 OCT 2021 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Replication-paper.tex
 (./Replication-paper.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-10-12> (./AEA.cls
+L3 programming layer <2021-10-18> (./AEA.cls
 Document Class: AEA 2011/07/24 American Economic Association Article Classes
 (./multicol.sty
 Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
@@ -255,31 +255,31 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.de
 f
-File: l3backend-pdftex.def 2021-10-12 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box78
 ) (./Replication-paper.aux)
 \openout1 = `Replication-paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-Package hyperref Info: Link coloring OFF on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+Package hyperref Info: Link coloring OFF on input line 33.
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -291,55 +291,64 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 (./Replication-paper.out) (./Replication-paper.out)
 \@outlinefile=\write3
 \openout3 = `Replication-paper.out'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-No file Replication-paper.bbl.
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
-
+Overfull \hbox (105.13403pt too wide) in paragraph at lines 95--109
+ [] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
-{/Users/dans/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./Replication-paper.aux)
+{/Users/dans/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+29.
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 129.
+No file Replication-paper.bbl.
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--172
+
+ []
+
+[2] (./Replication-paper.aux)
 Package rerunfilecheck Info: File `Replication-paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8217 strings out of 480559
- 121236 string characters out of 5902702
- 431255 words of memory out of 5000000
- 25766 multiletter control sequences out of 15000+600000
- 411204 words of font info for 53 fonts, out of 8000000 for 9000
+ 8240 strings out of 480539
+ 121699 string characters out of 5902059
+ 433915 words of memory out of 5000000
+ 25804 multiletter control sequences out of 15000+600000
+ 411209 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,8n,80p,214b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0600.
-600pk> </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1
-095.600pk> </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/t
-crm0800.600pk></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmcsc10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmssbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti8.pfb>
-Output written on Replication-paper.pdf (2 pages, 108243 bytes).
+600pk> </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0
+800.600pk></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmcsc10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmssbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti8.pfb>
+Output written on Replication-paper.pdf (2 pages, 124985 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
