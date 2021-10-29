@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  29 OCT 2021 03:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  29 OCT 2021 05:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -566,23 +566,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 <./Replication-paper_files/figure-latex/t test ACA-1.pdf>] [10]
+[9 <./Replication-paper_files/figure-latex/t test ACA-1.pdf>] [10] [11]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12]
 No file Replication-paper.bbl.
-[13] [14] (./Replication-paper.aux)
+[13] (./Replication-paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -590,8 +583,8 @@ Package rerunfilecheck Info: File `Replication-paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10764 strings out of 480539
- 158936 string characters out of 5902059
+ 10763 strings out of 480539
+ 158929 string characters out of 5902059
  493266 words of memory out of 5000000
  28187 multiletter control sequences out of 15000+600000
  411014 words of font info for 53 fonts, out of 8000000 for 9000
@@ -608,10 +601,10 @@ c/amsfonts/cm/cmr8.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmssbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti8.pfb>
-Output written on Replication-paper.pdf (14 pages, 367849 bytes).
+Output written on Replication-paper.pdf (13 pages, 367158 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 49 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

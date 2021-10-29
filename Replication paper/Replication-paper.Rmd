@@ -31,7 +31,7 @@ library(kableExtra)
 library(ggpubr)
 library(rstatix)
 library("gplots")
-knitr::write_bib(c("knitr", "rmarkdown"), width = 60)
+citation("rmarkdown")
 
 # rm(list = ls())
 ```
@@ -460,7 +460,7 @@ tbl2_df <-
 
 kable(tbl2_df,format = "latex", booktabs = TRUE,
       caption = "Study 2 (Wave 1)") %>%
-          kable_styling(latex_options = "scale_down")
+          kable_styling(latex_options = "hold_position")
 
 # chisq.test(tbl2_df)
 
@@ -486,7 +486,7 @@ tbl3_df <-
 
 kable(tbl3_df,format = "latex", booktabs = TRUE,
       caption = "Recall effects in Study 2 (Wave 2)") %>%
-          kable_styling(latex_options = "scale_down")
+          kable_styling(latex_options = "hold_position")
 
 # chisq.test(tbl3_df)
 
@@ -535,7 +535,7 @@ tbl_oct_df <-
 
 kable(tbl_oct_df,format = "latex", booktabs = TRUE,
       caption = "Recall effects in Study 2 (Wave 1)") %>%
-          kable_styling(latex_options = "scale_down")
+          kable_styling(latex_options = "hold_position")
 
 
 # chisq.test(tbl_oct_df)
@@ -563,7 +563,7 @@ tbl_nov_df <-
 
 kable(tbl_nov_df,format = "latex", booktabs = TRUE,
       caption = "Recall effects in Study 2 (Wave 2)") %>%
-          kable_styling(latex_options = "scale_down")
+          kable_styling(latex_options = "hold_position")
 
 # chisq.test(tbl_nov_df)
 
@@ -600,7 +600,7 @@ row.names(rumor_only_df) <- c("Accept rumor", "Reject rumor", "Not sure")
 
 kable(rumor_only_df,format = "latex", booktabs = TRUE,
       caption = "Recall effects on rumor only conditiion in Study 2 (Wave 2)") %>%
-          kable_styling(latex_options = "scale_down")
+          kable_styling(latex_options = "hold_position")
 
 
 # chisq.test(rumor_only_df)
@@ -625,7 +625,7 @@ row.names(rumor_correction_df) <- c("Accept rumor", "Reject rumor", "Not sure")
 
 kable(rumor_correction_df,format = "latex", booktabs = TRUE,
       caption = "Recall effects on rumor + correction conditiion in Study 2 (Wave 2)") %>%
-          kable_styling(latex_options = "scale_down")
+          kable_styling(latex_options = "hold_position")
 
 # chisq.test(rumor_correction_df)
 
