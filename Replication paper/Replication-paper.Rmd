@@ -1,5 +1,5 @@
 ---
-title: "The Power of Rumor Mill: How Rumors Shape Political Decision Making"
+title: "The Power of Rumor Mill: A replication Study of Berinsky's (2017) Research on Political Rumors concerning the 2010 ACA "
 short: "Replication of Berinsky (2017)"
 journal: "AER" # AER, AEJ, PP, JEL
 month: "`r format(Sys.Date(), '%m')`"
@@ -27,12 +27,24 @@ output: rticles::aea_article
 ```{r,message=FALSE, warning=FALSE,echo = F, results = 'hide'}
 library(tidyverse)
 library(haven)
+library(kableExtra)
+library(ggpubr)
+library(rstatix)
+library("gplots")
+knitr::write_bib(c("knitr", "rmarkdown"), width = 60)
+
 # rm(list = ls())
 ```
 
 ```{r, echo = F, eval = F}
 SSI <- 
   haven::read_dta("/Users/dans/Documents/Berinsky_2017/dataset/SSI Wave 1 & 2 combined.dta") 
+
+W1 <- 
+  haven::read_dta("/Users/dans/Documents/Berinsky_2017/dataset/SSI Wave 1 only.dta")
+
+CCES <- 
+  haven::read_dta("/Users/dans/Documents/Berinsky_2017/dataset/CCES replication study.dta")
 ```
 
 ```{r echo = F,eval = F}
@@ -40,94 +52,599 @@ SSI_df <-
   SSI %>% 
   select(- caseid) %>% 
   as_tibble()
-head(SSI_df)
+
+W1_df <- 
+  W1 %>% 
+  select(- caseid) %>% 
+  as_tibble()
+
+CCES_df <- 
+  CCES %>% select(- caseid) %>% 
+  as_tibble() 
 ```
 
 ```{r save datasets,eval = F,echo = F}
 # Save multiple objects
-save(SSI_df, file = "data.RData")
+save(SSI_df,W1_df,W1_full,W1_sub,CCES_df,both_complete, file = "data.RData")
 ```
 
-```{r load data,message=FALSE, warning=FALSE,echo = F,  results = 'hide'}
+```{r,message=FALSE, warning=FALSE,echo = F,  results = 'hide'}
 # To load the data again
 load("data.RData")
 ```
 
-\section{Experimental design}
+# Experimental design
 
 Berinsky conducted the survey experimental using a two wave online survey. From 17 - 19 May 2010, Berinsky  performed a between subjects design experiment, in which the outcome is only measured post - treatment, online with a national sample of 1701 American adults. The second wave was administered to only 699 of the initial respondents from 25 - 29 May 2010. The experiment was conducted by Survey Sample International (SSI) - a U.S. based digital research business that offers survey sampling and related services for market survey research. The survey was constructed according to the the US adult population on education, gender, age, geography, and income.    
 
-\subsection{Between vs. Within Subject Design}
+## Between and Within Subject Design
 
-Widely used in Psychological studies, between-subject experimental designs are an experimental approach in which each subject is tested under one condition and only exposed to a single treatment. In Berinsky's experimental design, the survey respondents were randomly assigned to four different treatment groups and one control group and presented with the stories regarding the controversial 2010 ACA. The following table details the conditions which the survey respondents received, 
+Widely used in Psychological studies, between-subject experimental designs are an experimental approach in which each subject is tested under one condition and only exposed to a single treatment. In Berinsky's experimental design, the survey respondents were randomly assigned to four different treatment groups and one control group and presented with the stories regarding the controversial 2010 ACA. The following details the conditions which the survey respondents received, 
 
-\begin{table}[h!]
-\caption{The experimental treatments and control of the study}
+1.Rumor only. In this group, respondents were presented with a rumor surrounding the 2010 ACA. 
 
-\begin{tabular}{lll}
-& Condition & Description \\
-1 & Rumor & Rumor \\
-2 & Rumor and Correction & Rumor and correction \\
-3 & Rumor and Republican correction & Rumor and correction, Quote from Republican senator \\
-4 & Rumor and Democratic correction & Rumor and correction, quote from emocratic representative \\
-5 & Control & No experimeital conditions
-\end{tabular}
-\begin{tablenotes}
-Table provides a brief description of the experimental design. See text for details.
-\end{tablenotes}
-\begin{tablenotes}[Source]
-Table drawn on the original Berinsky(2017) article.
-\end{tablenotes}
-\end{table}
+2.Rumor and Correction. In this treatment group, respondents were presented with a rumor and a correction debunking the rumor.  
 
+3.Rumor and Republican correction. In this treatment group, respondents were presented with a rumor and correction, which was a quote from Republican senator.
+
+4. Rumor and Democratic correction. In this condition, respondents were presented with a rumor and a correction, which was a uote from a Democratic representative. 
+
+5. Control. In the control group, no experimeital conditions were applied to the respondents. 
 
 I would like to further clarify the differences between between-subject (between - group) experimental designs and within-subjects (or repeated-measures) experimental designs. In a between-subjects design, or a between-groups design, each subject is only exposed to one condition. In a within-subjects design, however, each participant experiences all conditions.The same participants are tested repeatedly in order to assess differences between conditions. Therefore, if Berinsky were to conduct a within - subject experiment with the sample, the survey respondents would not be assigned to five groups (four treatment and one control). Instaed, they would be exposed to all the same treatments to examine their reactions to the rumors. 
 
 
 
 
+\subsection{Structure of the experimental design  - Wave 1}
+
+
+```{r check complete cases, eval = F,echo = F}
+# complete cases
+W1_df[complete.cases(W1_df), ]
+# screener 1 incomplete 
+sum(is.na(W1_df$screener1))
+# screener 2 incomplete 
+sum(is.na(W1_df$screener2))
+# we can check how many of them passed, how many failed for screener 1
+ftable(W1_df$screener1)
+# we can check how many of them passed, how many failed for screener 2
+ftable(W1_df$screener2)
+# both passed 
+W1_pass <- W1_df %>% 
+  filter(screener1 ==1 & screener2 ==1) %>% 
+  nrow()
+W1_pass
+
+```
+
+Even though there are 1701 respondents who were surveyed, only 1593 complete cases were documented. 99 respondents have not completed both of the screeners. 1043 of the survey respondents passed Screener1, while 559 of them failed. Likewise, 1098 of the respondents passed the second screener, while 504 failed. Approximately two thirds of the respondents passed each of the screened questions, which confirms the author's results. Furthermore, 879 of the respondents passed both of the screened questions. Therefore, 54.9% of the respondents whose responses were recorded (excluding the incomplete cases that contain missing values) passed both questions, which corresponds to the author's results. As he states in the paper, 55% of the sample passed both questions.            
+
+
+The following are the variables for the first-wave survey: 
+
+"ACA" refers to "Support for Health Care Reform."
+The question asks "Overall, given what you know about them, would you say you support or oppose the changes to the health care system that have been enacted by Congress and the Obama administration?" The answer choices are support (1) and oppose(2) .
+
+death refers to "Death Panel Rumor."
+The qustion asks "Do you think the changes to the health care system have that have been enacted by Congress and the Obama administration create “death panels” which have the authority to determine whether or not a gravely ill or injured person should receive health care based on their “level of productivity in society?” The answer choices are "yes (1), no (2), not sure(3).
+
+euth refers to "Euthanasia Rumor."
+The question asks "Do you think the changes to the health care system have that have been enacted by Congress and the Obama administration require elderly patients to meet with government officials to discuss “end of life” options including euthanasia?" The answer choices are "yes (1), no (2), not sure(3).
+
+Screener 1 is the first of the two screened question the author used to to measure respondent attention on the self-administered survey. For this question, if the respondent passed the attention check, their answer would be documented as "1", otherwise, "0."   
+
+Screener 2 is the second screened question for attention check. "pass" is coded as "1", and "fail"  is coded as "0."
+
+treat specifies the condition to which each group of respondents were assigned. From 1 - 5, the groups are labelled as "control" "rumor only" "rumor+correct" "rumor+rep","rumor+dem."
+
+PID is a variable that documents one's party identification. From  0 - 6, , it corresponds to "str rep" "wk rep" "lean rep" "ind" respectively, which translates to "Strong Republican","Weak Republican","Lean Republican","Independent","Lean Democrat","Weak Democrat","Strong Democrat" respectively.
+
+The following analysis will be focused on the "attentive sample," where the respondents passed both of the attention checks, according to Berinsky. 
+
+# Full sample
+
+```{r,eval = F,echo = F}
+# Full sample - who have been presented with two attention checks
+W1_full <- 
+  W1_df[complete.cases(W1_df), ]
+
+# attributes(W1_full$euth) 
+
+```
+
+As stated earlier, the number of the complete cases for the dataset is 1593, instead of 1596. The researcher of the orginal study may need to clarify why 1596 cases were used for analysis in the study. 
+
+```{r full sample, echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+
+tbl = table(as_factor(W1_full$euth), as_factor(W1_full$treat)) 
+tbl <-                 # the contingency table 
+tbl %>% 
+  as.data.frame.matrix()
+  
+colnames(tbl) <- c('Control','Rumor only','Rumor + Non - partisan Correction','Rumor + Republican Correction','Rumor + Democratic Correction' )
+row.names(tbl) <- c("Accept rumor", "Reject rumor", "Not sure")
+
+kable(tbl,format = "latex", booktabs = TRUE,
+      caption = "Treatment groups in the full sample") %>%
+          kable_styling(latex_options = "scale_down")
+
+# chi square test
+# chisq.test(tbl) 
+
+```
+
+Given the cross tabulation, I performed a Pearson chi-square test, which is essentially a test to examine whether the results of a crosstab are statistically significant. That is, if the two categorical variables independent of one another. The statistics of the significance test are as follows: N = 1593, $\chi^2$(8) = 18.819, Pr = 0.015, which are s consistent with Berinsky's finding. 
+
+```{r message=F,warning=FALSE,echo=F,results = 'asis',fig.align = 'center'}
+# 1. convert the data as a table
+dt <- as.table(as.matrix(tbl))
+# 2. Graph
+balloonplot(t(dt), main ="Conditions", xlab ="", ylab="",
+            colsrt=30,text.size=0.5,
+            label = FALSE, show.margins = FALSE)
+```
+The graph above also gives us an intuitive impression of the potential relationship between the categorical variables. 
+
+
+## Effects of treatments on Euthanasia rumor belief 
+```{r t test,echo = F}
+
+# make a longer format of the data  for treat and euth 
+
+W1_euth <- 
+  W1_full%>%
+  select(treat, euth) 
+W1_euth$treat <- as_factor(W1_euth$treat)
+W1_euth$euth <- as.numeric(W1_euth$euth)
+
+
+# summary stats 
+W1_stats <- W1_euth %>%
+  group_by(treat) %>%
+  get_summary_stats(euth, type = "mean_sd")
 
 
 
-Sample figure:
+kable(W1_stats,format = "latex", booktabs = TRUE,
+      caption = "Effects of rumor on treatments") %>%
+          kable_styling(latex_options = "scale_down")
 
-\begin{figure}
-Figure here.
+```
 
-\caption{Caption for figure below.}
-\begin{figurenotes}
-Figure notes without optional leadin.
-\end{figurenotes}
-\begin{figurenotes}[Source]
-Figure notes with optional leadin (Source, in this case).
-\end{figurenotes}
-\end{figure}
+To investigate the effects of treatments on Euthanasis rumor belief, I first presented a statistics summary table for each treatment group. As seen in the table, there seems to be relatively little variation across the five treatment groups. The means and standard deviations of the conditions are similar, suggesting that the effects are minimal across treatment groups.
 
-Sample table:
+```{r,echo = FALSE, message=FALSE, warning = FALSE,results='asis',fig.align = 'center'}
+# visualization 
+bxp <- ggboxplot(
+ W1_euth, x = "treat", y = "euth", 
+  ylab = "Effects of Treatments on Euthanasia Rumor Belief", xlab = "Conditions", add = "jitter"
+  )
 
-\begin{table}
-\caption{Caption for table above.}
+# Change method
+bxp + stat_compare_means(method = "t.test",aes(label = ..p.signif..), 
+                        label.x = 1.5, label.y = 4)
+# source: http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/76-add-p-values-and-significance-levels-to-ggplots/ 
+```
+One of the most common methods for comparing means is t-test, which is also the method Berinsky used to compared treatment group means. As the graph shows, there was not a significant difference between the control and treatment groups. 
 
-\begin{tabular}{lll}
-& Heading 1 & Heading 2 \\
-Row 1 & 1 & Rumor in the form of quotes endorsed by opponents \\
-Row 2 & 3 & 4%
-\end{tabular}
-\begin{tablenotes}
-Table notes environment without optional leadin.
-\end{tablenotes}
-\begin{tablenotes}[Source]
-Table notes environment with optional leadin (Source, in this case).
-\end{tablenotes}
-\end{table}
+```{r,echo = FALSE, message=FALSE, warning = FALSE,results='asis',fig.align = 'center'}
+# Compute Shapiro wilk test by goups
 
-References here (manual or bibTeX). If you are using bibTeX, add your bib file
-name in place of BibFile in the bibliography command.
-% Remove or comment out the next two lines if you are not using bibtex.
+# W1_euth %>%
+#   group_by(treat) %>%
+#   shapiro_test(euth)
+
+
+# # Draw a qq plot by group
+# ggqqplot(W1_euth, x = "euth", facet.by = "treat")
+# # seems that the rumor + rep data is not normally distributed, is it okay to perform t test? 
+
+
+stat.test <- W1_euth %>% 
+  t_test(euth ~ treat) %>%
+  add_significance()
+
+
+kable(stat.test,format = "latex", booktabs = TRUE,
+      caption = "Significance test results between conditions") %>%
+          kable_styling(latex_options = "scale_down")
+
+```
+  
+Berinsky conducted two sets of Chi-squared Tests of Independence, also refereed to as a $\chi^2$ tests, to examine the significance relationships across conditions. The first $\chi^2$ test was to examine the overall significance in order to examine if any significant differences among any of the conditions exist. Likewise, I further conducted a significance test to investigate the relationships between groups. Given that there are five conditions, therefore, ten pairs of comparisons were calculated. By comparing one condition to antoher, as the table shows, the p values are greater than 0.05, and therefore, I conclude that there are no relationships between each groups. In other words, a heterogenous treamment effect between the groups does not exist accorrding to the statistical results. However, Berinsky identified one significant relationship amongst the ten pairs, which is that the "rumor only" condition is statistically significantly different from the "rumor + Republican correction". My results suggest otherwise, partisanship is not a factor in rumor acceptance in this particular case. The Republican corretion is not a powerful treatment for rumor belief.    
+
+# Attentive sample
+```{r eval = F,echo = F}
+# sub sample of W1 that only contains who passed both attention checks 
+W1_sub <- 
+  W1_df %>%
+  filter(screener1 ==1 & screener2 ==1)
+  W1_sub
+```
+To ensure that the respondents paid close attention to the survey experiment, Berinsky applied two attention checks in this study. The attention check questions are designed to make sure that survey takers' attention is at a high level throughout the entire survey. For those who have succefully and correctly answered both of the questions, Berinsky further categorized them into a subsample, which is called "ateentive sample" accordingly. 
+
+Likewise, significant tests were performed on the subsample, which only includes complete cases where both of the attention checks are marked as "pass".In total, there were 879 respondents who passed both of the attention checks. 
+
+
+```{r attentive sample, echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+tbl0 = table(as_factor(W1_sub$euth), as_factor(W1_sub$treat)) 
+# tbl0                 # the contingency table 
+
+
+tbl_df0 <- 
+  as.data.frame.matrix(tbl0)
+
+colnames(tbl_df0) <- c('Control','Rumor only','Rumor + Non - partisan Correction','Rumor + Republican Correction','Rumor + Democratic Correction' )
+row.names(tbl_df0) <- c("Support", "Oppose")
+
+kable(tbl_df0,format = "latex", booktabs = TRUE,
+      caption = "Attentive sample") %>%
+          kable_styling(latex_options = "scale_down")
+
+
+
+# chisq.test(tbl0) 
+
+```
+
+By performing a Chi-square test, the following statistics were reported: N = 879. X-squared = 23.946, df = 8, p-value = 0.00234, which are consistent with Berinsky's finding. 
+
+```{r, echo = FALSE, message=FALSE, warning = FALSE,results='asis',fig.align = 'center'}
+
+# make a longer format of the data  for treat and euth 
+W1_euth0 <- 
+  W1_sub%>%
+  select(treat, euth) %>% 
+  na.omit()
+W1_sub$treat <- as_factor(W1_sub$treat)
+W1_sub$euth <- as.numeric(W1_sub$euth)
+
+
+# visualization 
+bxp0 <- ggboxplot(
+W1_euth0,x = "treat", y = "euth", 
+  ylab = "Effect of treatments on Euthanasia rumor belief", xlab = "Conditions", add = "jitter"
+  )
+bxp0
+
+
+
+# Compute Shapiro wilk test by goups
+
+# W1_sub %>%
+#   group_by(treat) %>%
+#   
+#  shapiro_euth <- shapiro_test(euth)
+
+# Draw a qq plot by group
+# ggqqplot(W1_sub, x = "euth", facet.by = "treat")
+# seems that the rumor + rep data is not normally distributed, is it okay to perform t test? 
+
+
+stat.test0 <- W1_sub %>% 
+  t_test(euth ~ treat) %>%
+  add_significance()
+
+
+kable(stat.test0,format = "latex", booktabs = TRUE,
+      caption = "Significance tests of attentive sample") %>%
+          kable_styling(latex_options = "scale_down")
+```
+
+For the sub-sample, the attentive sample according to Berinsky, I performed significance tests amongst the ten pairs of treatment groups, in order to examine the relationship between the treatment groups and the effects of treatments on belief of the Euthanasia rumor. As the t - test and significance test results show, there is no statitically significant relationship between the two variables. 
+
+## Effect of treatments on health care policy opinion (attentive sample)
+
+```{r, echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# examine the relationship between "ACA"  and "treat"
+tbl1 = table(as_factor(W1_sub$ACA), as_factor(W1_sub$treat)) 
+               # the contingency table 
+tbl_df1 <- 
+  as.data.frame.matrix(tbl1)
+
+colnames(tbl_df1) <- c('Control','Rumor only','Rumor + Non - partisan Correction','Rumor + Republican Correction','Rumor + Democratic Correction' )                       
+row.names(tbl_df1) <- c("Support", "Oppose")
+
+kable(tbl_df1,format = "latex", booktabs = TRUE,
+      caption = "Health care policy opinion (attentive sample)") %>%
+          kable_styling(latex_options = "scale_down")
+```
+The above table shows the health care policy opinion by each treatment group for the attentive sample.  
+
+```{r, echo = FALSE, message=FALSE, warning = FALSE}
+# prop.table(tbl0)
+
+# chisq.test(tbl_df1)
+
+
+```
+
+The statistics of the Chi-square test are reported as follows, N = 879, $\chi ^2$ = 9.0038, p-value = 0.061, which is greater than 0.05. Such statisticals are consistent with Berinsky's finding. 
+
+
+```{r t test ACA, echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+
+# make a longer format of the data  for treat and euth 
+
+W1_ACA <-
+  W1_sub%>%
+  select(treat, ACA) %>% 
+  na.omit()
+
+W1_sub$treat <- as_factor(W1_sub$treat)
+W1_sub$euth <- as.numeric(W1_sub$ACA)
+
+
+
+# summary stats 
+W1_ACA_stats  <- W1_ACA %>%
+  group_by(treat) %>%
+  get_summary_stats(ACA, type = "mean_sd")
+
+kable(W1_ACA_stats,format = "latex", booktabs = TRUE,
+      caption = "Statistics of support for Health care policy reform (attentive sample)") %>%
+          kable_styling(latex_options = "scale_down")
+
+
+# visualization 
+
+bxp1 <- ggboxplot(
+W1_ACA,x = "treat", y = "ACA", 
+  ylab = "Effect of Treatments on Health Care Policy Opinion, May 2010 (Sttentive Sample)", xlab = "Conditions", add = "jitter"
+  )
+bxp1
+
+
+
+# Compute Shapiro wilk test by goups
+
+# W1_ACA %>%
+#   group_by(treat) %>%
+#   shapiro_test(ACA)
+
+
+# Draw a qq plot by group
+# ggqqplot(W1_sub, x = "euth", facet.by = "treat")
+# seems that the rumor + rep data is not normally distributed, is it okay to perform t test? 
+
+
+stat.test1 <- W1_ACA %>% 
+  t_test(ACA ~ treat) %>%
+  add_significance()
+
+kable(stat.test1,format = "latex", booktabs = TRUE,
+      caption = "Health care policy opinion (attentive sample)") %>%
+          kable_styling(latex_options = "scale_down")
+
+```
+
+Again, none of the relationships are statitically significant. Overall the results are consistent with Berinsky's findings. However, he did identified one statistically significant relationship between "rumor only" and "rumor + Republican correction." He also considered the pairs with p values that are slightly greater than 0.05 marginally statitically significant. My statitcal results suggest that none of the relationships are considered statitically significant in Study 1. 
+
+# Study 2
+
+A few months after the first study, in which Berinsky surveyed 1701 American adults for their opinions on a political rumor surrounding the ACA 2010, Berinsky conducted a second experiment on October/Noverber 2010. However, the experiment was administered by YouGov instead of Survey Sampling International this time. The subject of the second experiment was still rumors concerning the ACA 2010. According to Berinsky, the stories presented to the respondents were modeled on the stories from Study 1. However, the conditions were modified. The control condition was identical to the "rumor" condition from Study 1. The second "correction only" was altered and did not mention the rumor concerning the death penal, but only with the description of the provisions in the 2010 ACA. The third condition that was identical to the "rumor and Republican correction" condiction from Study 1 and presented both the rumor from the first condition and the correction from the second condition. For Study 2, Berinsky did not apply attention checks. In addition, no control group was included in this follow - up study.    
+
+In this study, the respondents were presented with two types of recall questions, where they were asked to identify the person who said the quote. The sample was split two two groups for comparison. Half of the survey takers were assigned to an "irrelevant" recall" condition, in which the question asks what offce was held by Bestsy McCaughey, while the other half was placed in a "long recall" condition, where they received two questions with identical answer choices. The first recall question asks “You have every right to fear…[You] should not have a government-run plan to decide when to pull the plug on Grandma.” The second recall questions asks "The health care reform bill requires “people in Medicare have a required counseling session that will tell them how to end their life sooner." 
+
+This dataset contains all the 1000 cases Berinsky collected for the second study, which is referred to as CCES. The following are the variables, 
+
+"randtreat" refers to the story condition, including the three conditions, namely 'Rumor only','Correction only','Rumor + Correction'.Please note that no control group is included in this study.  
+
+"randtreat2" refers to the first recall condition, including 'Short recall'  and 'Long recall' questions 
+
+""ACA" refers to whether the respondent supports or opposes the act. 
+
+"euth_w1" refers to whether the Euthanasia rumor was belieavable in Wave 1. 
+
+"euth_w2" refers to whether the Euthanasia rumor was belieavable in Wave 2. 
+
+Please note that Berinsky conducted two waves of the study, in October and November, respectively, and the belief question was asked in both waves. Therefore, "euth_w1" am "euth_w2"  ask the same question. However, support for the health care reform bill ("ACA") was only asked in Wave 1. 
+
+
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# Study 2 Wave 1
+tbl2 = table(as_factor(CCES_df$euth_w1), as_factor(CCES_df$randtreat)) 
+
+tbl2_df <-                 # the contingency table  <- 
+  as.data.frame.matrix(tbl2)
+
+colnames(tbl2_df) <- c('Rumor only','Correction only','Rumor + Correction','Skip (the question)','Not Asked (the quetion)' )                       
+row.names(tbl2_df) <- c("Accept rumor", "Reject rumor", "Not sure","Skipped","Not asked")
+
+
+tbl2_df <- 
+  tbl2_df %>% 
+  select((1:3)) %>% 
+  slice(1:3)
+
+kable(tbl2_df,format = "latex", booktabs = TRUE,
+      caption = "Study 2 (Wave 1)") %>%
+          kable_styling(latex_options = "scale_down")
+
+# chisq.test(tbl2_df)
+
+```
+
+In general, we can observe from the table that respondents tended to reject the rumor. The statistics of the Chi - square test are consistent with Berinsky's finding: N = 1000, $\chi^2$ (4) = 12.237, p-value = 0.01567, which is smaller than 0.05, indicating that the relationship is significant. 
+
+
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# Study 2 Wave 2
+tbl3 = table(as_factor(CCES_df$ACA), as_factor(CCES_df$randtreat2)) 
+
+tbl3_df <-                 # the contingency table  <- 
+  as.data.frame.matrix(tbl3)
+
+colnames(tbl3_df) <- c('Short recall','Long recall','Skip (the question)','Not asked (the quetion)' )                       
+row.names(tbl3_df) <- c("Strongly support", "Somewhat support", "Somewhat oppose","Strongly oppose","Skipped","Not asked")
+
+tbl3_df <- 
+  tbl3_df %>% 
+  select((1:2)) %>% 
+  slice(1:4)
+
+kable(tbl3_df,format = "latex", booktabs = TRUE,
+      caption = "Recall effects in Study 2 (Wave 2)") %>%
+          kable_styling(latex_options = "scale_down")
+
+# chisq.test(tbl3_df)
+
+```
+The Chi square test statistics are  X-squared = 3.7756, df = 3, p-value = 0.2867, suggesting that the relationship is not statitically significant. That is, there is no difference between the effects of irellevant or long recall questions. Respodents exposed to either conditions showed no difference in accepting political rumors. 
+
+
+```{r complete both waves, echo = FALSE,eval=FALSE}
+
+# complete cases
+CCES_df[complete.cases(CCES_df), ]
+# screener 1 incomplete 
+sum(is.na(CCES_df$euth_w1))
+# screener 2 incomplete 
+sum(is.na(CCES_df$euth_w2))
+# we can check how many of them passed, how many failed for screener 1
+ftable(CCES_df$euth_w1)
+# we can check how many of them passed, how many failed for screener 2
+ftable(CCES_df$euth_w2)
+
+```
+
+To gauge the number of respondents who completed both waves, I used the variables euth_w1 and euth_w2 in the dataset provided by Berinsky. Given that all the 1000 respondents have provided a valid response for the question concerning euth_w1, I can conclude that the number of respondents who completed the first wave is 1000, and the the number of the respondents who completed both waves depends on the second wave. 165 Respondents have not provided a answer to the question concerning euth_w2, therefore, the number of respondents who completed both waves should be 835 instead of 837.
+
+
+```{r both complete cases, echo = FALSE,eval=FALSE}
+both_complete <- 
+   CCES_df[complete.cases( CCES_df[ , c('euth_w1','euth_w2')]), ] 
+```
+
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# Wave 1 October complete
+tbl_oct = table(as_factor(both_complete$euth_w1), as_factor(both_complete$randtreat)) 
+
+tbl_oct_df <-                 # dataframe
+  as.data.frame.matrix(tbl_oct)
+
+colnames(tbl_oct_df) <- c('Rumor only','Correction only','Rumor + Correction','Skip (the question)','Not Asked (the quetion)' )                       
+row.names(tbl_oct_df) <- c("Accept rumor", "Reject rumor", "Not sure","Skipped","Not asked")
+
+
+tbl_oct_df <- 
+  tbl_oct_df %>% 
+  select((1:3)) %>% 
+  slice(1:3)
+
+kable(tbl_oct_df,format = "latex", booktabs = TRUE,
+      caption = "Recall effects in Study 2 (Wave 1)") %>%
+          kable_styling(latex_options = "scale_down")
+
+
+# chisq.test(tbl_oct_df)
+```
+The statistics are: X-squared = 15.172, df = 4, p-value = 0.004357, which is less than 0.05, suggesting the overall significance between the three treatment conditions. This finding is consistent with Berinsky's. 
+
+
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+#Wave 2 Nov
+
+# Wave 1 October complete
+tbl_nov = table(as_factor(both_complete$euth_w2), as_factor(both_complete$randtreat)) 
+
+tbl_nov_df <-                 # dataframe
+  as.data.frame.matrix(tbl_nov)
+
+colnames(tbl_nov_df) <- c('Rumor only','Correction only','Rumor + Correction','Skip (the question)','Not Asked (the quetion)' )                       
+row.names(tbl_nov_df) <- c("Accept rumor", "Reject rumor", "Not sure","Skipped","Not asked")
+
+
+tbl_nov_df <- 
+  tbl_nov_df %>% 
+  select((1:3)) %>% 
+  slice(1:3)
+
+kable(tbl_nov_df,format = "latex", booktabs = TRUE,
+      caption = "Recall effects in Study 2 (Wave 2)") %>%
+          kable_styling(latex_options = "scale_down")
+
+# chisq.test(tbl_nov_df)
+
+
+```
+
+The statistics are X-squared = 5.0398, df = 4, p-value = 0.2832. Which again confirms Berinsky's finding. 
+
+## reheasal effect 
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# rumor only and rumor correction 
+
+both_complete$randtreat <- as_factor(both_complete$randtreat)
+
+levels(both_complete$randtreat) <- c('Rumor only','Correction only','Rumor + Correction','Skip (the question)','Not Asked (the quetion)' )    
+```
+
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# split the table by variable treat 
+table_split <- split(both_complete, both_complete$randtreat)
+
+# rumor only table
+rumor_only <- table_split[1]
+rumor_only <- data.frame(Reduce(rbind, rumor_only))
+
+rumor_only <- 
+  rumor_only %>% 
+  as.data.frame.matrix()
+
+rumor_only_df <- table(as_factor(rumor_only$euth_w2), as_factor(rumor_only$randtreat2)) 
+colnames(rumor_only_df) <- c('Short recall','Long recall' )  
+row.names(rumor_only_df) <- c("Accept rumor", "Reject rumor", "Not sure")
+
+
+kable(rumor_only_df,format = "latex", booktabs = TRUE,
+      caption = "Recall effects on rumor only conditiion in Study 2 (Wave 2)") %>%
+          kable_styling(latex_options = "scale_down")
+
+
+# chisq.test(rumor_only_df)
+
+```
+For "rumor only" condition, the statistics are N= 289, X-squared = 4.0712, df = 2, p-value = 0.1306. 
+
+```{r echo = FALSE, message=FALSE, warning = FALSE,results='asis'}
+# rumor + correction 
+
+rumor_correction <- table_split[3]
+rumor_correction <- data.frame(Reduce(rbind, rumor_correction))
+
+rumor_correction <- 
+  rumor_correction %>% 
+  as.data.frame.matrix()
+
+rumor_correction_df <- table(as_factor(rumor_correction$euth_w2), as_factor(rumor_correction$randtreat2)) 
+colnames(rumor_correction_df) <- c('Short recall','Long recall' )  
+row.names(rumor_correction_df) <- c("Accept rumor", "Reject rumor", "Not sure")
+
+
+kable(rumor_correction_df,format = "latex", booktabs = TRUE,
+      caption = "Recall effects on rumor + correction conditiion in Study 2 (Wave 2)") %>%
+          kable_styling(latex_options = "scale_down")
+
+# chisq.test(rumor_correction_df)
+
+
+```
+
+The statistics for the "rumor + correction" condition are N = 285,  X-squared = 2.4477, df = 2, p-value = 0.2941
+
+Again it seems that there is no statistically significant relationship between the "recall" condition and rumor acceptance. My results are consistent with Berinsky's, merely increasing the fuency of the rumor increases its effectiveness. 
+
+# Discussion and conclusions 
+
+Overall my results are consistent with Berinsky's findings, suggesting that the studied Berinsky conducted are replicable.  
+
+For Study 1, Berinsky concludes that corrections from Republicans debunking heath care rumors are the most effecitve way to conter misinformation. However, my replicated results show that none of the relationships amongst the control and treatment groups are significant. In other words, my results do not lend support to Berinsky's conclusion. We did not identify other statitically significant relationships betwen the treatment groups. However, the results of the t - tests and significance tests I conducted lend strong support to the conclusioin that there is no statistically significant relationship among the variables. 
+
+For Study 2, our results are consisitent. My results show that Study 2 replicates the findings from Study 1, no statitically significant relationships existed among the treatment groups. The hypothesis that fluency of the rumor may increase effectiveness of rumor spreading does not gain sufficient support.  
+
 \bibliographystyle{aea}
 \bibliography{references}
 
-% The appendix command is issued once, prior to all appendices, if any.
-\appendix
 
-\section{Mathematical Appendix}

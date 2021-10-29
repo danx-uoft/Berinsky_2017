@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  20 OCT 2021 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  29 OCT 2021 03:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -131,12 +131,183 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count276
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count277
+\@cmidlb=\count278
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count279
+\@lastruleclass=\count280
+\@thisrulewidth=\dimen168
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+\LTleft=\skip58
+\LTright=\skip59
+\LTpre=\skip60
+\LTpost=\skip61
+\LTchunksize=\count281
+\LTcapwidth=\dimen169
+\LT@head=\box78
+\LT@firsthead=\box79
+\LT@foot=\box80
+\LT@lastfoot=\box81
+\LT@gbox=\box82
+\LT@cols=\count282
+\LT@rows=\count283
+\c@LT@tables=\count284
+\c@LT@chunks=\count285
+\LT@p@ftn=\toks21
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen170
+\ar@mcellbox=\box83
+\extrarowheight=\dimen171
+\NC@list=\toks22
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box84
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count286
+\multirow@dima=\skip65
+\bigstrutjot=\dimen172
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen173
+\WF@size=\dimen174
+\c@WF@wrappedlines=\count287
+\WF@box=\box85
+\WF@everypar=\toks23
+Package: wrapfig 2003/01/31  v 3.6
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count288
+\float@exts=\toks24
+\float@box=\box86
+\@float@everytoks=\toks25
+\@floatcapt=\box87
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\everycr=\toks26
+\minrowclearance=\skip66
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+))
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box88
+\sift@deathcycles=\count289
+\@vwid@loff=\dimen175
+\@vwid@roff=\dimen176
+)
+\c@taburow=\count290
+\tabu@nbcols=\count291
+\tabu@cnt=\count292
+\tabu@Xcol=\count293
+\tabu@alloc=\count294
+\tabu@nested=\count295
+\tabu@target=\dimen177
+\tabu@spreadtarget=\dimen178
+\tabu@naturalX=\dimen179
+\tabucolX=\dimen180
+\tabu@Xsum=\dimen181
+\extrarowdepth=\dimen182
+\abovetabulinesep=\dimen183
+\belowtabulinesep=\dimen184
+\tabustrutrule=\dimen185
+\tabu@thebody=\toks27
+\tabu@footnotes=\toks28
+\tabu@box=\box89
+\tabu@arstrutbox=\box90
+\tabu@hleads=\box91
+\tabu@vleads=\box92
+\tabu@cellskip=\skip67
+)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable
+.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box93
+)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttabl
+ex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip68
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box94
+\UL@hyphenbox=\box95
+\UL@skip=\skip69
+\UL@hook=\toks29
+\UL@height=\dimen186
+\UL@pe=\count296
+\UL@pixel=\dimen187
+\ULC@box=\box96
+Package: ulem 2019/11/18
+\ULdepth=\dimen188
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen189
+\c@nlinenum=\count297
+\TeXr@lab=\toks30
+) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
 ) (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -148,7 +319,7 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks31
 ) (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
@@ -166,9 +337,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen156
-\Hy@linkcounter=\count277
-\Hy@pagecounter=\count278
+\@linkdim=\dimen190
+\Hy@linkcounter=\count298
+\Hy@pagecounter=\count299
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -183,7 +354,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count279
+\Hy@SavedSpaceFactor=\count300
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -196,22 +367,22 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count280
+\c@Hy@tempcnt=\count301
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen157
+\XeTeXLinkMargin=\dimen191
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count281
-\Field@Width=\dimen158
-\Fld@charsize=\dimen159
+\Fld@menulength=\count302
+\Field@Width=\dimen192
+\Fld@charsize=\dimen193
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -225,9 +396,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count282
-\c@Item=\count283
-\c@Hfootnote=\count284
+\Hy@abspage=\count303
+\c@Item=\count304
+\c@Hfootnote=\count305
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -237,8 +408,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count285
-\c@bookmark@seq@number=\count286
+\Fld@listcount=\count306
+\c@bookmark@seq@number=\count307
 
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck
 .sty
@@ -251,35 +422,49 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip58
+\Hy@SectionHShift=\skip70
 )
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.de
 f
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count287
-\l__pdf_internal_box=\box78
-) (./Replication-paper.aux)
+\l__color_backend_stack_int=\count308
+\l__pdf_internal_box=\box97
+) (./Replication-paper.aux
+
+LaTeX Warning: Label `tab:t test ACA' multiply defined.
+
+)
 \openout1 = `Replication-paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-Package hyperref Info: Link coloring OFF on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 47.
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/dans/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -289,58 +474,125 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ng.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count288
+\c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 (./Replication-paper.out) (./Replication-paper.out)
 \@outlinefile=\write3
 \openout3 = `Replication-paper.out'.
 
+[1
 
-Overfull \hbox (105.13403pt too wide) in paragraph at lines 95--109
+{/Users/dans/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+
+Overfull \hbox (8.23982pt too wide) in paragraph at lines 189--194
+\OT1/cmr/m/n/10.95 ``Strong Re-pub-li-can'',``Weak Re-pub-li-can'',``Lean Re-pu
+b-li-can'',``Independent'',``Lean
+ []
+
+<Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf, id=30, 380.42125pt
+ x 227.85126pt>
+File: Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (
+type pdf)
+<use Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-6-1
+.pdf  used on input line 229.
+(pdftex.def)             Requested size: 380.4203pt x 227.8507pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[3] [4 <./Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf>]
+<Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf, id=54, 463.7325pt 
+x 312.16624pt>
+File: Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (
+type pdf)
+<use Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-7-1
+.pdf  used on input line 263.
+(pdftex.def)             Requested size: 463.73135pt x 312.16548pt.
+
+Overfull \hbox (78.19652pt too wide) in paragraph at lines 263--263
  [] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
+[5 <./Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf>]
+<Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf, id=66, 463.7325pt
+ x 312.16624pt>
+File: Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file 
+(type pdf)
+<use Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-10-
+1.pdf  used on input line 348.
+(pdftex.def)             Requested size: 463.73135pt x 312.16548pt.
 
-{/Users/dans/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-No file Replication-paper.bbl.
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--164
-
+Overfull \hbox (78.19652pt too wide) in paragraph at lines 348--348
+ [] 
  []
 
-[2] (./Replication-paper.aux)
+[6] [7 <./Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf>]
+<Replication-paper_files/figure-latex/t test ACA-1.pdf, id=88, 463.7325pt x 325
+.215pt>
+File: Replication-paper_files/figure-latex/t test ACA-1.pdf Graphic file (type 
+pdf)
+<use Replication-paper_files/figure-latex/t test ACA-1.pdf>
+Package pdftex.def Info: Replication-paper_files/figure-latex/t test ACA-1.pdf 
+ used on input line 426.
+(pdftex.def)             Requested size: 463.73135pt x 325.2142pt.
+
+Overfull \hbox (88.19652pt too wide) in paragraph at lines 426--427
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[8] [9 <./Replication-paper_files/figure-latex/t test ACA-1.pdf>] [10] [11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+[12]
+No file Replication-paper.bbl.
+[13] [14] (./Replication-paper.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Replication-paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8220 strings out of 480539
- 121338 string characters out of 5902059
- 433915 words of memory out of 5000000
- 25788 multiletter control sequences out of 15000+600000
- 411209 words of font info for 53 fonts, out of 8000000 for 9000
+ 10764 strings out of 480539
+ 158934 string characters out of 5902059
+ 487264 words of memory out of 5000000
+ 28187 multiletter control sequences out of 15000+600000
+ 411014 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,8n,80p,214b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,10n,80p,290b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0600.
 600pk> </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0
 800.600pk></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmcsc10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr8.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmssbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti8.pfb>
-Output written on Replication-paper.pdf (2 pages, 115777 bytes).
+fonts/cm/cmmi10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmssbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti8.pfb>
+Output written on Replication-paper.pdf (14 pages, 365754 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
