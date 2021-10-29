@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  29 OCT 2021 03:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.20)  29 OCT 2021 03:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -487,71 +487,90 @@ LaTeX Info: Redefining \nameref on input line 47.
 
 {/Users/dans/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
-Overfull \hbox (8.23982pt too wide) in paragraph at lines 189--194
+Overfull \hbox (8.23982pt too wide) in paragraph at lines 199--204
 \OT1/cmr/m/n/10.95 ``Strong Re-pub-li-can'',``Weak Re-pub-li-can'',``Lean Re-pu
 b-li-can'',``Independent'',``Lean
  []
 
-<Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf, id=30, 380.42125pt
+[3]
+<Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf, id=37, 380.42125pt
  x 227.85126pt>
 File: Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (
 type pdf)
 <use Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-6-1
-.pdf  used on input line 229.
+.pdf  used on input line 239.
 (pdftex.def)             Requested size: 380.4203pt x 227.8507pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4 <./Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf>]
-<Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf, id=54, 463.7325pt 
+<Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf, id=38, 463.7325pt 
 x 312.16624pt>
 File: Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (
 type pdf)
 <use Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf>
 Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-7-1
-.pdf  used on input line 263.
+.pdf  used on input line 273.
 (pdftex.def)             Requested size: 463.73135pt x 312.16548pt.
 
-Overfull \hbox (78.19652pt too wide) in paragraph at lines 263--263
+Overfull \hbox (78.19652pt too wide) in paragraph at lines 273--273
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[4 <./Replication-paper_files/figure-latex/unnamed-chunk-6-1.pdf>] [5 <./Replic
+ation-paper_files/figure-latex/unnamed-chunk-7-1.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]
+<Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf, id=73, 463.7325pt
+ x 312.16624pt>
+File: Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file 
+(type pdf)
+<use Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-10-
+1.pdf  used on input line 358.
+(pdftex.def)             Requested size: 463.73135pt x 312.16548pt.
+
+Overfull \hbox (78.19652pt too wide) in paragraph at lines 358--358
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./Replication-paper_files/figure-latex/unnamed-chunk-7-1.pdf>]
-<Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf, id=66, 463.7325pt
- x 312.16624pt>
-File: Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file 
-(type pdf)
-<use Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: Replication-paper_files/figure-latex/unnamed-chunk-10-
-1.pdf  used on input line 348.
-(pdftex.def)             Requested size: 463.73135pt x 312.16548pt.
+[7 <./Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf>]
 
-Overfull \hbox (78.19652pt too wide) in paragraph at lines 348--348
- [] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6] [7 <./Replication-paper_files/figure-latex/unnamed-chunk-10-1.pdf>]
 <Replication-paper_files/figure-latex/t test ACA-1.pdf, id=88, 463.7325pt x 325
 .215pt>
 File: Replication-paper_files/figure-latex/t test ACA-1.pdf Graphic file (type 
 pdf)
 <use Replication-paper_files/figure-latex/t test ACA-1.pdf>
 Package pdftex.def Info: Replication-paper_files/figure-latex/t test ACA-1.pdf 
- used on input line 426.
+ used on input line 436.
 (pdftex.def)             Requested size: 463.73135pt x 325.2142pt.
 
-Overfull \hbox (88.19652pt too wide) in paragraph at lines 426--427
+Overfull \hbox (88.19652pt too wide) in paragraph at lines 436--437
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[8] [9 <./Replication-paper_files/figure-latex/t test ACA-1.pdf>] [10] [11]
+[8]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./Replication-paper_files/figure-latex/t test ACA-1.pdf>] [10]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -559,7 +578,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 1484) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12]
 No file Replication-paper.bbl.
@@ -572,12 +591,12 @@ Package rerunfilecheck Info: File `Replication-paper.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  10764 strings out of 480539
- 158934 string characters out of 5902059
- 487264 words of memory out of 5000000
+ 158936 string characters out of 5902059
+ 493266 words of memory out of 5000000
  28187 multiletter control sequences out of 15000+600000
  411014 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,10n,80p,290b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,10n,80p,290b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0600.
 600pk> </Users/dans/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0
 800.600pk></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/c
@@ -589,7 +608,7 @@ c/amsfonts/cm/cmr8.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmssbx10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></Users/dans/Library/TinyTeX/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti8.pfb>
-Output written on Replication-paper.pdf (14 pages, 365754 bytes).
+Output written on Replication-paper.pdf (14 pages, 367849 bytes).
 PDF statistics:
  199 PDF objects out of 1000 (max. 8388607)
  151 compressed objects within 2 object streams
